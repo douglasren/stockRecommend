@@ -122,7 +122,5 @@ def train_model(industry_name, os1=None):
         # print "test:", test
         print "pro test:", classifier.classify(), " lable:", label
 
-
-
 if __name__ == '__main__':
     train_model('电子信息')

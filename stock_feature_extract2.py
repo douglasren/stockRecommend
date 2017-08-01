@@ -208,6 +208,10 @@ def stock_mutil_history_feature(data_list, days=5, index=0):
 
         res.append((before_days, label))
 
+    # for i in range(index, len(data_list) - days):
+    #     label = get_stock_label(i - 1)
+    #     res.append((data_list[i], label))
+
     return res
 
 
@@ -322,7 +326,7 @@ def train_model(test_start_index=0, cur_date=datetime.datetime.now().strftime('%
     # stock_open_set = stock_load_active()
     stock_open_set = stock_load_active_from_data(stocks_list)
 
-    feature_len = 50
+    feature_len = 1
     start_index = test_start_index + 1
     test_start_index = test_start_index
     one_len = 100
